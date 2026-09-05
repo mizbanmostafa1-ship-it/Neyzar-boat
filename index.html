@@ -260,8 +260,33 @@
     updateTotal();
 
     function reserve(e) {
-      e.preventDefault();
-      alert('درخواست رزرو شما ثبت شد. مبلغ بر اساس مدت تور و تعداد نفرات محاسبه شده است.');
+  e.preventDefault();
+
+  const duration = document.getElementById('duration').value;
+  const people = document.getElementById('people').value;
+  const amount = document.getElementById('total').textContent;
+
+  const inputs = document.querySelectorAll('form input');
+  const date = document.getElementById('persianDate').value;
+  const time = inputs[1].value;
+  const name = inputs[2].value;
+  const phone = inputs[3].value;
+
+  const message =
+    '🚤 درخواست رزرو قایق‌سواری اسکله نیزار%0A%0A' +
+    'نام: ' + name + '%0A' +
+    'موبایل: ' + phone + '%0A' +
+    'تاریخ: ' + date + '%0A' +
+    'ساعت: ' + time + '%0A' +
+    'مدت تور: ' + duration + ' دقیقه%0A' +
+    'تعداد نفرات: ' + people + '%0A' +
+    'مبلغ: ' + amount + ' تومان';
+
+  conconst whatsapp = 'https://wa.me/989371240118?text=' + message;
+  window.open(whatsapp, '_blank');
+    }
+      
+    
     }
   </script>
 
