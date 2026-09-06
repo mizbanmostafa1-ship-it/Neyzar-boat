@@ -100,120 +100,125 @@
 
       <form onsubmit="reserve(event)">
 
-        <div>
-          <label>مدت تور</label>
-          <select id="duration">
-            <option value="15">۱۵ دقیقه</option>
-            <option value="30">۳۰ دقیقه</option>
-            <option value="45">۴۵ دقیقه</option>
-            <option value="60">۶۰ دقیقه</option>
-          </select>
-        </div>
+  <div>
+    <label>مدت تور</label>
+    <select id="duration" required>
+      <option value="15">۱۵ دقیقه</option>
+      <option value="30">۳۰ دقیقه</option>
+      <option value="45">۴۵ دقیقه</option>
+      <option value="60">۶۰ دقیقه</option>
+    </select>
+  </div>
 
-        <div>
-          <label>تعداد نفرات</label>
-          <select id="people">
-            <option value="1">۱</option>
-            <option value="2">۲</option>
-            <option value="3">۳</option>
-            <option value="4">۴</option>
-            <option value="5">۵</option>
-          </select>
-        </div>
+  <div>
+    <label>تعداد نفرات</label>
+    <select id="people" required>
+      <option value="1">۱ نفر</option>
+      <option value="2">۲ نفر</option>
+      <option value="3">۳ نفر</option>
+      <option value="4">۴ نفر</option>
+      <option value="5">۵ نفر</option>
+    </select>
+  </div>
 
-        <div>
-          <label>تاریخ</label>
-          
-        </div>
+  <div class="full">
+    <label>تاریخ رزرو</label>
 
-        <div>
-          <label>ساعت</label>
-          <div>
-  <label>تاریخ رزرو</label>
-  <select id="persianYear" required>
-  <option value="">سال</option>
-  <option>۱۴۰۵</option>
-  <option>۱۴۰۶</option>
-  <option>۱۴۰۷</option>
-  <option>۱۴۰۸</option>
-  <option>۱۴۰۹</option>
-  <option>۱۴۱۰</option>
-</select>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
 
-<select id="persianMonth" required>
-  <option value="">ماه</option>
-  <option>فروردین</option>
-  <option>اردیبهشت</option>
-  <option>خرداد</option>
-  <option>تیر</option>
-  <option>مرداد</option>
-  <option>شهریور</option>
-  <option>مهر</option>
-  <option>آبان</option>
-  <option>آذر</option>
-  <option>دی</option>
-  <option>بهمن</option>
-  <option>اسفند</option>
-</select>
+      <select id="persianYear" required>
+        <option value="">سال</option>
+        <option value="1405">۱۴۰۵</option>
+        <option value="1406">۱۴۰۶</option>
+        <option value="1407">۱۴۰۷</option>
+        <option value="1408">۱۴۰۸</option>
+        <option value="1409">۱۴۰۹</option>
+        <option value="1410">۱۴۱۰</option>
+      </select>
 
-<select id="persianDay" required>
-  <option value="">روز</option>
-  <option>۱</option>
-  <option>۲</option>
-  <option>۳</option>
-  <option>۴</option>
-  <option>۵</option>
-  <option>۶</option>
-  <option>۷</option>
-  <option>۸</option>
-  <option>۹</option>
-  <option>۱۰</option>
-  <option>۱۱</option>
-  <option>۱۲</option>
-  <option>۱۳</option>
-  <option>۱۴</option>
-  <option>۱۵</option>
-  <option>۱۶</option>
-  <option>۱۷</option>
-  <option>۱۸</option>
-  <option>۱۹</option>
-  <option>۲۰</option>
-  <option>۲۱</option>
-  <option>۲۲</option>
-  <option>۲۳</option>
-  <option>۲۴</option>
-  <option>۲۵</option>
-  <option>۲۶</option>
-  <option>۲۷</option>
-  <option>۲۸</option>
-  <option>۲۹</option>
-  <option>۳۰</option>
-  <option>۳۱</option>
-</select>
-          </div>
-        </div>
+      <select id="persianMonth" required>
+        <option value="">ماه</option>
+        <option value="01">فروردین</option>
+        <option value="02">اردیبهشت</option>
+        <option value="03">خرداد</option>
+        <option value="04">تیر</option>
+        <option value="05">مرداد</option>
+        <option value="06">شهریور</option>
+        <option value="07">مهر</option>
+        <option value="08">آبان</option>
+        <option value="09">آذر</option>
+        <option value="10">دی</option>
+        <option value="11">بهمن</option>
+        <option value="12">اسفند</option>
+      </select>
 
-        <div class="full">
-          <label>نام و نام خانوادگی</label>
-          <input type="text" placeholder="نام شما" required>
-        </div>
+      <select id="persianDay" required>
+        <option value="">روز</option>
+        <option value="01">۱</option>
+        <option value="02">۲</option>
+        <option value="03">۳</option>
+        <option value="04">۴</option>
+        <option value="05">۵</option>
+        <option value="06">۶</option>
+        <option value="07">۷</option>
+        <option value="08">۸</option>
+        <option value="09">۹</option>
+        <option value="10">۱۰</option>
+        <option value="11">۱۱</option>
+        <option value="12">۱۲</option>
+        <option value="13">۱۳</option>
+        <option value="14">۱۴</option>
+        <option value="15">۱۵</option>
+        <option value="16">۱۶</option>
+        <option value="17">۱۷</option>
+        <option value="18">۱۸</option>
+        <option value="19">۱۹</option>
+        <option value="20">۲۰</option>
+        <option value="21">۲۱</option>
+        <option value="22">۲۲</option>
+        <option value="23">۲۳</option>
+        <option value="24">۲۴</option>
+        <option value="25">۲۵</option>
+        <option value="26">۲۶</option>
+        <option value="27">۲۷</option>
+        <option value="28">۲۸</option>
+        <option value="29">۲۹</option>
+        <option value="30">۳۰</option>
+        <option value="31">۳۱</option>
+      </select>
 
-        <div class="full">
-          <label>شماره موبایل</label>
-          <input type="tel" placeholder="09xxxxxxxxx" required>
-        </div>
+    </div>
+  </div>
 
-        <div class="full total">
-          مبلغ قابل پرداخت:
-          <span id="total">۵۰۰,۰۰۰</span>
-          تومان
-        </div>
+  <div>
+    <label>ساعت رزرو</label>
+    <input type="time" id="bookingTime" required>
+  </div>
 
-        <div class="full">
-          <button type="submit">ثبت درخواست رزرو</button>
-        </div>
+  <div class="full">
+    <label>نام و نام خانوادگی</label>
+    <input type="text" id="customerName" placeholder="نام شما" required>
+  </div>
+
+  <div class="full">
+    <label>شماره موبایل</label>
+    <input type="tel" id="customerPhone" placeholder="09xxxxxxxxx" required>
+  </div>
+
+  <div class="full total">
+    مبلغ قابل پرداخت:
+    <span id="total">۵۰۰,۰۰۰</span> تومان
+  </div>
+
+  <div class="full">
+    <button type="submit">ثبت درخواست رزرو</button>
+  </div>
 
       </form>
+
+        
+
+      
     </div>
   </section>
 
@@ -259,8 +264,60 @@
 
     updateTotal();
 
-    function reserve(e) {
+    const duration = document.getElementById('duration');
+const people = document.getElementById('people');
+const total = document.getElementById('total');
+
+const prices = {
+  15: 500000,
+  30: 700000,
+  45: 1000000,
+  60: 1300000
+};
+
+function updateTotal() {
+  const amount = prices[duration.value] * Number(people.value);
+  total.textContent = amount.toLocaleString('fa-IR');
+}
+
+duration.addEventListener('change', updateTotal);
+people.addEventListener('change', updateTotal);
+
+updateTotal();
+
+function reserve(e) {
   e.preventDefault();
+
+  const year = document.getElementById('persianYear').value;
+  const month = document.getElementById('persianMonth').value;
+  const day = document.getElementById('persianDay').value;
+
+  const date = year + '/' + month + '/' + day;
+
+  const time = document.getElementById('bookingTime').value;
+  const name = document.getElementById('customerName').value;
+  const phone = document.getElementById('customerPhone').value;
+  const durationText = duration.options[duration.selectedIndex].text;
+  const peopleText = people.options[people.selectedIndex].text;
+  const amount = total.textContent;
+
+  const message =
+    '🚤 درخواست رزرو قایق‌سواری اسکله نیزار\n\n' +
+    '👤 نام: ' + name + '\n' +
+    '📱 موبایل: ' + phone + '\n' +
+    '📅 تاریخ: ' + date + '\n' +
+    '⏰ ساعت: ' + time + '\n' +
+    '🚤 مدت تور: ' + durationText + '\n' +
+    '👥 تعداد نفرات: ' + peopleText + '\n' +
+    '💰 مبلغ: ' + amount + ' تومان';
+
+  const whatsapp =
+    'https://wa.me/989371240118?text=' +
+    encodeURIComponent(message);
+
+  window.location.href = whatsapp;
+}
+  e
 
   const duration = document.getElementById('duration').value;
   const people = document.getElementById('people').value;
