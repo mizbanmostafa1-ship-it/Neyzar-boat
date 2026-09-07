@@ -247,28 +247,6 @@
     const total = document.getElementById('total');
 
     const prices = {
-      15: 500000,
-      30: 700000,
-      45: 1000000,
-      60: 1300000
-    };
-
-    function updateTotal() {
-      const pricePerPerson = prices[duration.value];
-      const amount = pricePerPerson * Number(people.value);
-      total.textContent = amount.toLocaleString('fa-IR');
-    }
-
-    duration.addEventListener('change', updateTotal);
-    people.addEventListener('change', updateTotal);
-
-    updateTotal();
-
-    const duration = document.getElementById('duration');
-const people = document.getElementById('people');
-const total = document.getElementById('total');
-
-const prices = {
   15: 500000,
   30: 700000,
   45: 1000000,
@@ -286,6 +264,36 @@ people.addEventListener('change', updateTotal);
 updateTotal();
 
 function reserve(e) {
+  e.preventDefault();
+
+  const year = document.getElementById('persianYear').value;
+  const month = document.getElementById('persianMonth').value;
+  const day = document.getElementById('persianDay').value;
+  const time = document.getElementById('bookingTime').value;
+  const name = document.getElementById('customerName').value;
+  const phone = document.getElementById('customerPhone').value;
+
+  const date = year + '/' + month + '/' + day;
+  const durationText = duration.options[duration.selectedIndex].text;
+  const peopleText = people.options[people.selectedIndex].text;
+  const amount = total.textContent;
+
+  const message =
+    '🚤 درخواست رزرو قایق‌سواری اسکله نیزار\n\n' +
+    '👤 نام: ' + name + '\n' +
+    '📱 موبایل: ' + phone + '\n' +
+    '📅 تاریخ: ' + date + '\n' +
+    '⏰ ساعت: ' + time + '\n' +
+    '🚤 مدت تور: ' + durationText + '\n' +
+    '👥 تعداد نفرات: ' + peopleText + '\n' +
+    '💰 مبلغ: ' + amount + ' تومان';
+
+  const whatsapp =
+    'https://wa.me/989371240118?text=' +
+    encodeURIComponent(message);
+
+  window.location.href = whatsapp;
+}
   e.preventDefault();
 
   const year = document.getElementById('persianYear').value;
