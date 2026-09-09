@@ -101,4 +101,270 @@ button:active{transform:scale(.99)}
   padding:22px;
 }
 footer{
-  margin-top:
+  margin-top:30px;
+  background:#073e48;
+  color:white;
+  text-align:center;
+  padding:25px 15px;
+}
+@media(max-width:650px){
+  .form-grid{grid-template-columns:1fr}
+  .full{grid-column:auto}
+  .hero h1{font-size:24px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+  <h1>اسکله تعاونی قایقرانان نیزار</h1>
+  <p>تور قایق‌سواری و تالاب‌گردی در بندر انزلی</p>
+</header>
+
+<main class="container">
+
+<section>
+  <h2>قیمت تورها</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>۱۵ دقیقه</h3>
+      <div class="price">۵۰۰,۰۰۰ تومان</div>
+      <p>به ازای هر نفر</p>
+    </div>
+
+    <div class="card">
+      <h3>۳۰ دقیقه</h3>
+      <div class="price">۷۰۰,۰۰۰ تومان</div>
+      <p>به ازای هر نفر</p>
+    </div>
+
+    <div class="card">
+      <h3>۴۵ دقیقه</h3>
+      <div class="price">۱,۰۰۰,۰۰۰ تومان</div>
+      <p>به ازای هر نفر</p>
+    </div>
+
+    <div class="card">
+      <h3>۶۰ دقیقه</h3>
+      <div class="price">۱,۳۰۰,۰۰۰ تومان</div>
+      <p>به ازای هر نفر</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="booking">
+  <h2>رزرو قایق</h2>
+
+  <form id="bookingForm">
+
+    <div class="form-grid">
+
+      <div class="field">
+        <label for="duration">مدت تور</label>
+        <select id="duration" required>
+          <option value="15">۱۵ دقیقه</option>
+          <option value="30">۳۰ دقیقه</option>
+          <option value="45">۴۵ دقیقه</option>
+          <option value="60">۶۰ دقیقه</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="people">تعداد نفرات</label>
+        <select id="people" required>
+          <option value="1">۱ نفر</option>
+          <option value="2">۲ نفر</option>
+          <option value="3">۳ نفر</option>
+          <option value="4">۴ نفر</option>
+          <option value="5">۵ نفر</option>
+        </select>
+      </div>
+
+      <div class="field full">
+        <label>تاریخ رزرو (شمسی)</label>
+
+        <div class="date-grid">
+
+          <select id="persianYear" required>
+            <option value="1405">۱۴۰۵</option>
+            <option value="1406">۱۴۰۶</option>
+            <option value="1407">۱۴۰۷</option>
+            <option value="1408">۱۴۰۸</option>
+            <option value="1409">۱۴۰۹</option>
+            <option value="1410">۱۴۱۰</option>
+          </select>
+
+          <select id="persianMonth" required>
+            <option value="1">فروردین</option>
+            <option value="2">اردیبهشت</option>
+            <option value="3">خرداد</option>
+            <option value="4">تیر</option>
+            <option value="5">مرداد</option>
+            <option value="6">شهریور</option>
+            <option value="7">مهر</option>
+            <option value="8">آبان</option>
+            <option value="9">آذر</option>
+            <option value="10">دی</option>
+            <option value="11">بهمن</option>
+            <option value="12">اسفند</option>
+          </select>
+
+          <select id="persianDay" required>
+            <option value="1">۱</option>
+            <option value="2">۲</option>
+            <option value="3">۳</option>
+            <option value="4">۴</option>
+            <option value="5">۵</option>
+            <option value="6">۶</option>
+            <option value="7">۷</option>
+            <option value="8">۸</option>
+            <option value="9">۹</option>
+            <option value="10">۱۰</option>
+            <option value="11">۱۱</option>
+            <option value="12">۱۲</option>
+            <option value="13">۱۳</option>
+            <option value="14">۱۴</option>
+            <option value="15">۱۵</option>
+            <option value="16">۱۶</option>
+            <option value="17">۱۷</option>
+            <option value="18">۱۸</option>
+            <option value="19">۱۹</option>
+            <option value="20">۲۰</option>
+            <option value="21">۲۱</option>
+            <option value="22">۲۲</option>
+            <option value="23">۲۳</option>
+            <option value="24">۲۴</option>
+            <option value="25">۲۵</option>
+            <option value="26">۲۶</option>
+            <option value="27">۲۷</option>
+            <option value="28">۲۸</option>
+            <option value="29">۲۹</option>
+            <option value="30">۳۰</option>
+            <option value="31">۳۱</option>
+          </select>
+
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="bookingTime">ساعت</label>
+        <input id="bookingTime" type="time" required>
+      </div>
+
+      <div class="field">
+        <label for="customerName">نام و نام خانوادگی</label>
+        <input id="customerName" type="text" required>
+      </div>
+
+      <div class="field full">
+        <label for="customerPhone">شماره موبایل</label>
+        <input id="customerPhone" type="tel" inputmode="tel" required>
+      </div>
+
+    </div>
+
+    <div class="total">
+      مبلغ قابل پرداخت:
+      <span id="total">۵۰۰,۰۰۰</span>
+      تومان
+    </div>
+
+    <button type="submit">رزرو و ارسال درخواست در واتساپ</button>
+
+  </form>
+</section>
+
+<section class="info">
+  <h2>اطلاعات اسکله</h2>
+  <p>
+    ظرفیت هر قایق حداکثر ۵ نفر است.
+  </p>
+  <p>
+    آدرس: بندر انزلی، خیابان تکاوران، روبروی مصلا، جنب پمپ بنزین فلاح
+  </p>
+</section>
+
+</main>
+
+<footer>
+  <p>اسکله تعاونی قایقرانان نیزار</p>
+  <p>۰۱۳۴۳۵۱۲۸۲۸ • ۰۹۱۱۱۸۳۷۴۵۸</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const duration = document.getElementById("duration");
+  const people = document.getElementById("people");
+  const total = document.getElementById("total");
+  const bookingForm = document.getElementById("bookingForm");
+
+  const prices = {
+    15: 500000,
+    30: 700000,
+    45: 1000000,
+    60: 1300000
+  };
+
+  function persianNumber(number){
+    return number.toLocaleString("fa-IR");
+  }
+
+  function updateTotal(){
+    const price = prices[duration.value];
+    const count = Number(people.value);
+    const amount = price * count;
+
+    total.textContent = persianNumber(amount);
+  }
+
+  duration.addEventListener("change", updateTotal);
+  people.addEventListener("change", updateTotal);
+
+  updateTotal();
+
+  bookingForm.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const year = document.getElementById("persianYear").value;
+    const month = document.getElementById("persianMonth");
+    const day = document.getElementById("persianDay").value;
+    const time = document.getElementById("bookingTime").value;
+    const name = document.getElementById("customerName").value.trim();
+    const phone = document.getElementById("customerPhone").value.trim();
+
+    const monthName = month.options[month.selectedIndex].text;
+    const durationText = duration.options[duration.selectedIndex].text;
+    const peopleText = people.options[people.selectedIndex].text;
+
+    const amount = prices[duration.value] * Number(people.value);
+
+    const message =
+`درخواست رزرو قایق‌سواری
+
+نام: ${name}
+موبایل: ${phone}
+تاریخ: ${year}/${monthName}/${day}
+ساعت: ${time}
+مدت تور: ${durationText}
+تعداد نفرات: ${peopleText}
+مبلغ: ${persianNumber(amount)} تومان`;
+
+    const whatsappNumber = "989371240118";
+    const whatsappUrl =
+      "https://wa.me/" + whatsappNumber +
+      "?text=" + encodeURIComponent(message);
+
+    window.location.href = whatsappUrl;
+  });
+
+});
+</script>
+
+</body>
+</html>
