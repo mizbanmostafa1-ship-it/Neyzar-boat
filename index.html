@@ -14,7 +14,49 @@
 <div class="top">📞 رزرو و پاسخگویی: ۰۹۱۱۱۸۳۷۴۵۸ | ۰۱۳۴۳۵۱۲۸۲۸</div>
 <nav class="nav"><a class="brand" href="#home"><span class="logo">🚤</span><span>اسکله تعاونی قایقرانان نیزار</span></a><div class="navlinks"><a href="#prices">قیمت‌ها</a><a href="#booking">رزرو</a><a href="#gallery">گالری واقعی اسکله و تالاب</a><a href="#contact">تماس با ما</a></div></nav>
 <section class="hero" id="home"><div><h1>قایق‌سواری و تالاب‌گردی در بندر انزلی</h1><p>یک تجربه آرام و خاطره‌انگیز در طبیعت زیبای تالاب انزلی؛ با قایق‌های ظرفیت ۵ نفر و امکان رزرو سریع از طریق واتساپ.</p><div class="buttons"><a class="btn green" href="#booking">رزرو قایق</a><a class="btn" href="tel:09111837458">📞 تماس مستقیم</a></div></div></section>
-<section class="wrap"><div class="features"><div class="feature">🛟<b>ایمن</b><span>تجربه‌ای مطمئن</span></div><div class="feature">👨‍👩‍👧‍👦<b>ظرفیت ۵ نفر</b><span>مناسب خانواده</span></div><div class="feature">🌿<b>طبیعت</b><span>تالاب زیبای انزلی</span></div><div class="feature">⏱️<b>۱۵ تا ۶۰ دقیقه</b><span>انتخاب زمان دلخواه</span></div></div></section>
+<section id="why" class="section">
+  <h2>چرا اسکله تعاونی قایقرانان نیزار؟</h2>
+
+  <div class="features">
+
+    <div class="feature">
+      <div class="icon">🚤</div>
+      <h3>۳۱ سال تجربه</h3>
+      <p>بیش از سه دهه تجربه در ارائه خدمات قایق‌سواری در بندر انزلی.</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">📜</div>
+      <h3>دارای مجوز قانونی</h3>
+      <p>فعالیت قانونی تعاونی و اسکله با مجوزهای مربوطه.</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">🛟</div>
+      <h3>قایق‌های بیمه‌شده</h3>
+      <p>قایق‌ها تحت پوشش بیمه بوده و با رعایت اصول ایمنی آماده خدمات هستند.</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">🅿️</div>
+      <h3>پارکینگ اختصاصی</h3>
+      <p>امکان پارک خودرو برای آسودگی بیشتر مسافران.</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">👨‍✈️</div>
+      <h3>قایقرانان باتجربه</h3>
+      <p>ارائه خدمات توسط قایقرانان باتجربه و آشنا با مسیرهای تالاب انزلی.</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">📱</div>
+      <h3>رزرو آنلاین</h3>
+      <p>ثبت درخواست رزرو آنلاین و هماهنگی سریع از طریق واتساپ.</p>
+    </div>
+
+  </div>
+</section>
 <section class="wrap" id="prices"><div class="section-title"><h2>قیمت تورها</h2><p>قیمت به ازای هر نفر</p></div><div class="prices"><div class="card"><h3>۱۵ دقیقه</h3><div class="price">۵۰۰,۰۰۰ تومان</div></div><div class="card"><h3>۳۰ دقیقه</h3><div class="price">۷۰۰,۰۰۰ تومان</div></div><div class="card"><h3>۴۵ دقیقه</h3><div class="price">۱,۰۰۰,۰۰۰ تومان</div></div><div class="card"><h3>۶۰ دقیقه</h3><div class="price">۱,۳۰۰,۰۰۰ تومان</div></div></div></section>
 <section class="wrap" id="booking"><div class="booking"><div class="section-title"><h2>رزرو آنلاین قایق</h2><p>اطلاعات را وارد کنید؛ درخواست شما در واتساپ آماده ارسال می‌شود.</p></div><form onsubmit="reserve(event)"><div class="formgrid"><div class="field"><label>مدت تور</label><select id="duration"><option value="15">۱۵ دقیقه</option><option value="30">۳۰ دقیقه</option><option value="45">۴۵ دقیقه</option><option value="60">۶۰ دقیقه</option></select></div><div class="field"><label>تعداد مسافران</label><select id="people"></select></div><div class="field"><label>سال</label><select id="year"></select></div><div class="field"><label>ماه</label><select id="month"></select></div><div class="field"><label>روز</label><select id="day"></select></div><div class="field"><label>ساعت</label><input id="time" type="time" required></div><div class="field"><label>نام و نام خانوادگی</label><input id="name" required></div><div class="field"><label>شماره موبایل</label><input id="phone" type="tel" inputmode="tel" required></div></div><div class="total">مبلغ قابل پرداخت: <span id="total">۲,۵۰۰,۰۰۰</span> تومان</div><div id="capacityNote" style="background:#fff3cd;color:#6b4f00;border-radius:12px;padding:10px 14px;margin:10px 0;text-align:center;font-weight:700">ظرفیت هر قایق ۵ نفر است. اگر کمتر از ۵ نفر رزرو کنید، قایق به‌صورت دربست محاسبه می‌شود و هزینه ظرفیت کامل ۵ نفر دریافت خواهد شد.</div><button class="submit" type="submit">📲 رزرو و ارسال درخواست در واتساپ</button></form></div></section>
 <section class="wrap" id="gallery"><div class="section-title"><h2>گالری</h2><p>طبیعت و آب‌های زیبای انزلی</p></div>
